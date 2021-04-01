@@ -3,6 +3,11 @@
 #include "../common.h"
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
+
+// gta3
+#include <X11/Xresource.h>
+#include <X11/XKBlib.h>
+
 #include <stdatomic.h>
 
 #include "AtomDefs.h"
@@ -695,14 +700,163 @@ DECLSPEC int XWarpPointer(
 }
 
 // Maldita Castilla
-DECLSPEC int XSetWindowBackground(Display* display, Window w, unsigned long background_pixel)
+DECLSPEC int XSetWindowBackground(
+	Display* display,
+	Window w,
+	unsigned long background_pixel
+)
 {
     WARN_STUB;
     return 0;
 }
 
-DECLSPEC GC XCreateGC(Display* display, Drawable d, unsigned long valuemask, XGCValues* val)
+DECLSPEC GC XCreateGC(
+	Display* display,
+	Drawable d,
+	unsigned long valuemask,
+	XGCValues* val
+)
 {
     WARN_STUB;
     return 0;
 }
+
+// gta3 / libglfw
+DECLSPEC XClassHint* XAllocClassHint()
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC Bool XTranslateCoordinates(
+    Display* display,
+    Window src_w,
+    Window dest_w,
+    int src_x,
+    int src_y,
+    int* dest_x_return,   
+    int* dest_y_return,
+    Window* child_return
+)
+{
+    WARN_STUB;
+    return True;
+}
+
+DECLSPEC Bool XkbSelectEventDetails(
+    Display* display,
+	unsigned int deviceID,
+	unsigned int eventType,
+	unsigned long affect,
+	unsigned long details
+)
+{
+    WARN_STUB;
+    return True;
+}
+
+DECLSPEC int XFreeColormap(
+	Display* display,
+	Colormap colormap
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC int XGetScreenSaver(
+	Display* display,
+    int* timeout_return,
+    int* interval_return,
+    int* prefer_blanking_return,
+    int* allow_exposures_return
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC int XResizeWindow(
+	Display* display,
+	Window w,
+    unsigned int width,
+    unsigned int height
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+// fix
+DECLSPEC char *XGetICValues(
+	XIC ic
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC Bool XrmGetResource(
+    XrmDatabase database,
+    _Xconst char* str_name,
+    _Xconst char* str_class,
+    char** str_type_return,
+    XrmValue* value_return
+)
+{
+    WARN_STUB;
+    return True;
+}
+
+DECLSPEC XIM XOpenIM(
+	Display* dpy,
+    struct _XrmHashBucketRec* rdb,
+    char* res_name,
+    char* res_class
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC int XDeleteContext(
+	Display* display,
+    XID rid,
+    XContext context
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC Bool XkbGetState(
+	Display* dpy,
+	unsigned int deviceSpec,
+	XkbStatePtr rtrnState
+)
+{
+    WARN_STUB;
+    return True;
+}
+
+DECLSPEC Bool XIconifyWindow(
+	Display* display,
+	Window w,
+	int screen_number
+)
+{
+    WARN_STUB;
+    return True;
+}
+
+DECLSPEC int XSaveContext(
+	Display* display,
+    XID rid,
+    XContext context,
+    _Xconst char* data
+)
+{
+    WARN_STUB;
+    return 0;
+}
+
