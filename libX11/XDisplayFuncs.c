@@ -6,6 +6,9 @@
 
 // gta3 / libglfwgta3
 #include "custom_Xlib.h"
+#include "custom_Xutil.h"
+#include "custom_XKBlib.h"
+#include "custom_Xresource.h"
 
 #include <stdatomic.h>
 

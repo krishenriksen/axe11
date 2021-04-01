@@ -1,4 +1,3 @@
-// gta3 / libglfw
 #include <X11/Xresource.h>
 #include <X11/XKBlib.h>
 
@@ -1056,6 +1055,17 @@ DECLSPEC int XChangeWindowAttributes(
 {
     WARN_STUB;
     return 0;
+};
+
+DECLSPEC Bool XCheckIfEvent(
+    Display*		display,
+    XEvent*		event_return,
+    XPointer		arg,
+    Bool bla
+)
+{
+    WARN_STUB;
+    return True;
 };
 
 DECLSPEC Bool XCheckMaskEvent(
