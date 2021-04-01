@@ -693,3 +693,16 @@ DECLSPEC int XWarpPointer(
     WARN_STUB;
     return 0;
 }
+
+// Maldita Castilla
+DECLSPEC int XSetWindowBackground(Display* display, Window w, unsigned long background_pixel)
+{
+    WARN_STUB;
+    return 0;
+}
+
+DECLSPEC GC XCreateGC(Display* display, Drawable d, unsigned long valuemask, XGCValues* val)
+{
+    WARN_STUB;
+    return 0;
+}

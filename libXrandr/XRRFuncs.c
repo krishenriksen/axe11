@@ -60,3 +60,7 @@ DECLSPEC void XRRFreeScreenResources (XRRScreenResources *resources)
 {
     // XRRScreenResources here is a singleton, no need for freeing.
 }
+
+DECLSPEC void _XUnlockMutex_fn (XRRScreenResources *resources) {}
+DECLSPEC void _XLockMutex_fn (XRRScreenResources *resources) {}
+DECLSPEC void _Xglobal_lock (XRRScreenResources *resources) {}
